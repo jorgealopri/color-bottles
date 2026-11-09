@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<meta name="theme-color" content="#100b1b">
+		<title>Chroma Pour</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles/style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="ambient-field" aria-hidden="true"><span></span><span></span><span></span></div>
+		<main class="app-shell">
+			<header class="topbar">
+				<a class="wordmark" href="index.html" aria-label="Chroma Pour home">
+					<span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+					<span>CHROMA <b>POUR</b></span>
+				</a>
+				<div class="collection-label"><span class="live-dot"></span> THE COLOR STUDY <span class="collection-count">/ 300</span></div>
+			</header>
+
+			<section class="game" aria-labelledby="game-title">
+				<div class="game-heading">
+					<div>
+						<p class="eyebrow">A LITTLE ORDER, PLEASE</p>
+						<h1 id="game-title">Sort the <em>color.</em></h1>
+					</div>
+					<button class="restart-button" id="restartButton" type="button" title="Restart this level">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4.8 9A7.5 7.5 0 0 1 18 6.5L20 12M4 17v-5h5m10.2 3A7.5 7.5 0 0 1 6 17.5L4 12"/></svg>
+						<span>Restart level</span>
+					</button>
+				</div>
+
+				<div class="level-strip">
+					<div class="level-navigation" aria-label="Level navigation">
+						<button class="nav-button" id="previousButton" type="button" aria-label="Previous unlocked level" title="Previous level">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+						</button>
+						<div class="level-readout"><span class="eyebrow">CURRENT LEVEL</span><strong id="levelNumber">001</strong></div>
+						<button class="nav-button" id="nextButton" type="button" aria-label="Next unlocked level" title="Next level">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+						</button>
+					</div>
+					<div class="progress-block">
+						<div class="progress-copy"><span>COLLECTION</span><span id="progressText">1 / 300</span></div>
+						<div class="progress-track" id="progressTrack" role="progressbar" aria-label="Level progress" aria-valuemin="1" aria-valuemax="300" aria-valuenow="1">
+							<span id="progressFill"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="playfield">
+					<p id="gameStatus" class="visually-hidden" role="status" aria-live="polite">Choose a bottle to move its top color.</p>
+					<div id="board" class="board" aria-label="Bottle sorting puzzle"></div>
+					<div class="playfield-footer">
+						<span class="board-index" id="bottleCount">06 BOTTLES</span>
+						<span class="move-readout">MOVES <b id="moveCount">00</b></span>
+					</div>
+				</div>
+				<div class="win-message" id="winMessage" aria-live="polite" hidden>
+					<div class="win-copy"><span class="win-mark" aria-hidden="true">✓</span><span id="winText">Every color has found its bottle.</span></div>
+					<div class="rank-result">
+						<span class="rank-stars" id="rankStars" aria-label="0 out of 3 stars">☆☆☆</span>
+						<span class="rank-details" id="rankDetails"></span>
+					</div>
+					<button id="continueButton" type="button">Next level <span aria-hidden="true">→</span></button>
+				</div>
+			</section>
+
+			<footer class="page-footer"><span>POUR WITH INTENTION</span><span>NO TIMER. JUST TINT.</span></footer>
+		</main>
+	</body>
+</html>
