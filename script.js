@@ -34,7 +34,7 @@ const winText = document.querySelector('#winText');
 const rankStarsElement = document.querySelector('#rankStars');
 const rankDetailsElement = document.querySelector('#rankDetails');
 
-let level = 170;
+let level = readUnlockedLevel();
 let unlockedLevel = level;
 let bottles = [];
 let selectedBottle = null;
