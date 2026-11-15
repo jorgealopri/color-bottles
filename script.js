@@ -1,20 +1,20 @@
 const CAPACITY = 4;
 const MAX_LEVEL = 300;
 const COLORS = [
-	{ name: 'coral', value: '#ed604e' },
-	{ name: 'gold', value: '#e5b83f' },
-	{ name: 'leaf', value: '#65a96f' },
-	{ name: 'lagoon', value: '#3eaaa4' },
-	{ name: 'blue', value: '#5577df' },
-	{ name: 'rose', value: '#dc76a5' },
-	{ name: 'tangerine', value: '#eb853e' },
-	{ name: 'lime', value: '#9abf42' },
-	{ name: 'sky', value: '#55a9d8' },
-	{ name: 'berry', value: '#b95a76' },
-	{ name: 'violet', value: '#8a72bb' },
-	{ name: 'mint', value: '#70b7a0' },
-	{ name: 'tomato', value: '#d94b3f' },
-	{ name: 'mustard', value: '#c7a32f' }
+	{ name: 'coral', value: '#f47969' },
+	{ name: 'gold', value: '#edda09' },
+	{ name: 'leaf', value: '#377140' },
+	{ name: 'lagoon', value: '#85ded9' },
+	{ name: 'blue', value: '#3c5ec5' },
+	{ name: 'rose', value: '#f05aa0' },
+	{ name: 'tangerine', value: '#ea721d' },
+	{ name: 'lime', value: '#acd749' },
+	{ name: 'sky', value: '#4b9ac7' },
+	{ name: 'berry', value: '#a12b4f' },
+	{ name: 'violet', value: '#8754eb' },
+	{ name: 'mint', value: '#5dba9d' },
+	{ name: 'tomato', value: '#fe1500' },
+	{ name: 'grey', value: '#b9afa7' }
 ];
 
 const boardElement = document.querySelector('#board');
@@ -34,7 +34,7 @@ const winText = document.querySelector('#winText');
 const rankStarsElement = document.querySelector('#rankStars');
 const rankDetailsElement = document.querySelector('#rankDetails');
 
-let level = readUnlockedLevel();
+let level = 170;
 let unlockedLevel = level;
 let bottles = [];
 let selectedBottle = null;
